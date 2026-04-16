@@ -25,7 +25,7 @@ async function uploadFile() {
         const uploadResponse = await fetch(uploadURL, {
             method: "PUT",
             headers: {
-                "Content-Type": "" // Explicitly set to empty to match the Lambda signature
+                "Content-Type": "application/json" // MATCH THE LAMBDA
             },
             body: file
         });
